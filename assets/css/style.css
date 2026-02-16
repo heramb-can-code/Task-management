@@ -1,0 +1,143 @@
+/* Global Variables & Overrides */
+:root {
+    /* Brand Colors */
+    --primary-color: #6a1b9a;
+    --primary-light: #9c4dcc;
+    --primary-dark: #38006b;
+    --accent-color: #ffca28;
+
+    /* Neutral Colors */
+    --bg-color: #f4f5f7;
+    --surface-color: #ffffff;
+    --text-primary: #172b4d;
+    --text-secondary: #5e6c84;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Bootstrap Overrides */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: rgba(106, 27, 154, 0.1);
+    color: var(--primary-color);
+}
+
+.nav-pills .nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.nav-pills .nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(106, 27, 154, 0.05);
+}
+
+/* Utilities */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hover-lift {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.x-small {
+    font-size: 0.75rem;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c7d0;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a5adba;
+}
+
+/* Login Page Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-animation {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Member Card Add Button */
+.add-member-card {
+    background: transparent;
+    border: 2px dashed #dfe1e6;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.add-member-card:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: rgba(106, 27, 154, 0.04);
+}
+
+.add-member-card .material-icons-round {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
